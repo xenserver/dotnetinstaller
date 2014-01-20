@@ -1,0 +1,12 @@
+--- dni.proj	2014-01-20 15:18:30.016101500 +0000
++++ dni.proj	2014-01-20 15:22:11.788901500 +0000
+@@ -121,7 +121,9 @@
+     <CallTarget Targets="release" />
+     <CallTarget Targets="zip" />
+     <CallTarget Targets="installer" />
++<!--
+     <CallTarget Targets="unittests" />
++-->    
+     <CallTarget Targets="built" />
+   </Target>
+   <Target Name="built" DependsOnTargets="version">
