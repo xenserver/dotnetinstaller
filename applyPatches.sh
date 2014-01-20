@@ -36,7 +36,6 @@ apply_patches()
 {
   for i in ${1}
   do
-    # keep it quiet by default, if you want enable if DEBUG is defined.
     patch -d ${2} -p0 <${i}
   done
 }
