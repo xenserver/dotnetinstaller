@@ -1,0 +1,21 @@
+--- dotNetInstallerLib/DniMessageBox.cpp	2014-01-20 10:59:18.337662800 +0000
++++ dotNetInstallerLib/DniMessageBox.cpp	2014-01-20 10:58:54.942262800 +0000
+@@ -39,6 +39,8 @@
+ 	switch(InstallUILevelSetting::Instance->GetUILevel())
+ 	{
+ 	// basic UI, dialogs appear and disappea
++	
++	/* - commented out - we do not want to close dialogs automatically in basic ui mode
+ 	case InstallUILevelBasic:
+ 		{
+ 			g_hHook = SetWindowsHookEx(WH_CBT, CBTProc, NULL, GetCurrentThreadId());
+@@ -48,7 +50,8 @@
+ 			if (result == 0xFFFFFF) result = p_nDefaultResult;
+ 		}
+ 		break;
+-
++	*/
++		
+ 	// silent, no UI
+ 	case InstallUILevelSilent:
+ 		result = p_nDefaultResult;
