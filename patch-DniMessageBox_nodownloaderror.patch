@@ -1,0 +1,12 @@
+--- dotNetInstallerLib/DniMessageBox.cpp	2014-06-06 15:31:10.733695900 +0100
++++ dotNetInstallerLib/DniMessageBox.cpp	2014-06-06 15:32:20.007695900 +0100
+@@ -60,7 +60,8 @@
+ 	// full UI
+ 	case InstallUILevelFull:
+ 	default:
+-		result = AfxMessageBox(p_lpszText.c_str(), p_nType, p_nIDHelp);
++		if (!(p_nType == 16 && p_lpszText.find(L"Error downloading \"")))
++			result = AfxMessageBox(p_lpszText.c_str(), p_nType, p_nIDHelp);
+ 		break;
+ 	}
+ 
