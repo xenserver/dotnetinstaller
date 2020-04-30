@@ -1,6 +1,9 @@
 dotNetInstaller Setup Bootstrapper
 ==================================
 
+:warning: **This fork is deprecated and maybe deleted without notice** :warning:
+-------------------------------------------------------------------------------
+
 ![dotNetInstaller](https://github.com/dblock/dotnetinstaller/raw/master/Documentation/Images/Logo.gif)
 
 dotNetInstaller is a widely used, general-purpose setup bootstrapper for Microsoft Windows 95, 98, 2000, XP, 2003, Vista, 2008, Windows 7 and 8.
@@ -17,7 +20,7 @@ Essentials
 Bootstrapper
 ------------
 
-dotNetInstaller enables the developer to define the application prerequisites and install the correct version(s) of these components in a predictable order based on the processor architecture, user operating system type and language, allow the user to download these components from the web, install these components directly from a single packaged setup, local media or both. dotNetInstaller is very feature rich and runs on all known Windows operating systems with a very tiny footprint. 
+dotNetInstaller enables the developer to define the application prerequisites and install the correct version(s) of these components in a predictable order based on the processor architecture, user operating system type and language, allow the user to download these components from the web, install these components directly from a single packaged setup, local media or both. dotNetInstaller is very feature rich and runs on all known Windows operating systems with a very tiny footprint.
 
 A boostrapper doesn't replace tools like InstallShield, Wise, Visual Studio Setup and Deployment Project or Wix. The goal is to create an application to help users with installing the correct prerequisites. Most real world applications need to install several components to work properly, including Windows Service Packs, Internet Explorer, MDAC or .NET Framework. This kind of applications are most commonly known as bootstrappers. dotNetInstaller is such a bootstrapper.
 
@@ -34,25 +37,25 @@ dotNetInstaller ships with a CHM help file with a detailed Getting Started secti
 Bootstrapper Scenarios
 ----------------------
 
-A bootstrapper enables additional scenarios not supported by the installer alone. 
+A bootstrapper enables additional scenarios not supported by the installer alone.
 
-* Distribute a single, compressed, executable packaged setup with all pre-requisites. 
-* Distribute multiple installers that compose a large and complex application in a single package and enforce a well-defined installation workflow and dependencies. 
-* Package frequently required components or components with a small footprint, and download less frequently used or larger ones only when necessary. 
-* Provide additional parameters to existing package technologies, eg. automatically enabling logging in MSI installers. 
-* Support workflow that includes a reboot in the middle of an installation between interdependent components. 
-* Support web-based scenarios that include on-demand downloading the latest versions of the installed software and prerequisites. 
-* Uninstall applications composed of several packages in a single sequence. 
+* Distribute a single, compressed, executable packaged setup with all pre-requisites.
+* Distribute multiple installers that compose a large and complex application in a single package and enforce a well-defined installation workflow and dependencies.
+* Package frequently required components or components with a small footprint, and download less frequently used or larger ones only when necessary.
+* Provide additional parameters to existing package technologies, eg. automatically enabling logging in MSI installers.
+* Support workflow that includes a reboot in the middle of an installation between interdependent components.
+* Support web-based scenarios that include on-demand downloading the latest versions of the installed software and prerequisites.
+* Uninstall applications composed of several packages in a single sequence.
 
 dotNetInstaller Components
 --------------------------
 
-This project consists of the following elements: 
+This project consists of the following elements:
 
-* *dotNetInstaller* and *htmlInstaller*: main bootstrapper applications, written in C++. This is the raw setup which presents a GUI in front of the user that displays which components to install depending on which components are already installed on the operating system. The bootstrapper is statically linked with the CRT and has no prerequisites. 
-* *InstallerEditor*: an application for editing configuration files and bootstrapper resources, written in C# for the .NET Framework 2.0. The editor is also capable of importing older versions of dotNetInstaller configuration files and converting them into the current/newer format. 
-* *InstallerLinker*: a command-line bootstrapper linker that can be used in a build process, written in C# for the .NET Framework 2.0. 
-Several samples and dependency templates that can be reused as-is and that demonstrate sometimes complex checks which verify whether, for example, MDAC or .NET framework are already installed. 
+* *dotNetInstaller* and *htmlInstaller*: main bootstrapper applications, written in C++. This is the raw setup which presents a GUI in front of the user that displays which components to install depending on which components are already installed on the operating system. The bootstrapper is statically linked with the CRT and has no prerequisites.
+* *InstallerEditor*: an application for editing configuration files and bootstrapper resources, written in C# for the .NET Framework 2.0. The editor is also capable of importing older versions of dotNetInstaller configuration files and converting them into the current/newer format.
+* *InstallerLinker*: a command-line bootstrapper linker that can be used in a build process, written in C# for the .NET Framework 2.0.
+Several samples and dependency templates that can be reused as-is and that demonstrate sometimes complex checks which verify whether, for example, MDAC or .NET framework are already installed.
 
 Project History
 ---------------
